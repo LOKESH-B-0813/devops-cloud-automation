@@ -1,0 +1,14 @@
+---> import os: Tells Python to load the operating system toolset.
+
+---> os.path.exists("filename"): The specific Python logic block that checks if a file is present in Linux.
+
+---> if / else: The fork in the road. if runs if the condition is True; else runs if it's False.
+
+---> open(target_file, "w"): Python's way of opening a file in Write mode. If the file doesn't exist, Linux automatically creates it as a blank file.
+
+---> os.path.isdir("/path"): Checks specifically if a folder/directory exists at that location.
+
+---> Absolute Path (/): Starts looking from the very base of the system, meaning the script will work no matter what folder you run it from.
+
+
+
