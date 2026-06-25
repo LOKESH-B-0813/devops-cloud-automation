@@ -1,42 +1,43 @@
-import os
+"""import os
+import shutil
 
-def analyze_logs(file_path):
+def check_system_resources():
     print("=" * 50)
-    print(f"🚀 DEVOPS LOG ANALYZER: Scanning {file_path}")
+    print("🚀 LIVE DEVOPS MONITOR: Checking System Resources")
     print("=" * 50)
     
-    if not os.path.exists(file_path):
-        print(f"❌ Error: The file {file_path} does not exist.")
-        return
-
-    error_count = 0
-    warning_count = 0
-    critical_events = []
-
-    # Open and parse the log file line by line
-    with open(file_path, 'r') as file:
-        for line_num, line in enumerate(file, 1):
-            if "ERROR" in line:
-                error_count += 1
-            elif "WARNING" in line:
-                warning_count += 1
-            elif "CRITICAL" in line:
-                error_count += 1
-                critical_events.append(f"Line {line_num}: {line.strip()}")
-
-    # Print the automated analytics report
-    print("\n📈 [📊 METRICS SUMMARY]")
-    print(f"🔹 Total WARNINGS identified: {warning_count}")
-    print(f"🔺 Total ERRORS/CRITICALS identified: {error_count}")
+    # 1. Check Disk Space Usage
+    # shutil.disk_usage returns total, used, and free bytes
+    total, used, free = shutil.disk_usage("/")
+    used_percent = (used / total) * 100
+    
+    print(f"🔹 Disk Usage: {used_percent:.2f}% used")
+    if used_percent > 85:
+        print("🔺 CRITICAL: Disk space usage is dangerously high!")
+        
+    # 2. Check System Memory (RAM) using Linux /proc/meminfo
+    try:
+        with open("/proc/meminfo", "r") as f:
+            lines = f.readlines()
+        
+        # Extract Total and Free memory values from the system file
+        mem_total = int(lines[0].split()[1])
+        mem_available = int(lines[2].split()[1])
+        mem_used = mem_total - mem_available
+        ram_percent = (mem_used / mem_total) * 100
+        
+        print(f"🔹 RAM Usage: {ram_percent:.2f}% used")
+        if ram_percent > 90:
+            print("🔺 CRITICAL: RAM allocation has exceeded safety thresholds!")
+            
+    except Exception as e:
+        print(f"⚠️ Error reading memory resources: {e}")
+        
     print("-" * 50)
-
-    if critical_events:
-        print("\n🚨 [🔥 CRITICAL EVENTS DETECTED]")
-        for event in critical_events:
-            print(f"  -> {event}")
-    else:
-        print("\n✅ System status optimal: No critical events found.")
+    if used_percent <= 85 and ram_percent <= 90:
+        print("✅ System health is optimal. No issues detected.")
     print("=" * 50)
 
-# Run the analyzer against your existing log file
-analyze_logs("system_logs.txt")
+if __name__ == "__main__":
+    check_system_resources()
+"""
