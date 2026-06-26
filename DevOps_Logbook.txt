@@ -11,7 +11,7 @@
 ---> Absolute Path (/): Starts looking from the very base of the system, meaning the script will work no matter what folder you run it from.
 
 
-
+==========================================================================================================================================================================
 Date: June 22, 2026
 Session: Git Configuration & Log Automation
 
@@ -26,3 +26,63 @@ Commands Mastered:
 - git branch -M main
 - gh auth login
 - git push -u origin main
+
+===============================================================================================================================================================================
+Date: June 23, 2026
+Session: Linux Task Scheduling & Automation
+
+Accomplishments:
+- Implemented automated task scheduling using the native Linux Cron daemon.
+- Configured a crontab entry to execute system monitoring scripts on an hourly cron schedule.
+- Managed standard output and error redirection pipelines to generate automated logs via 'cron_output.log'.
+
+Commands Mastered:
+- crontab -e
+- crontab -l
+
+=================================================================================================================================================================================
+(June 25, 2026)
+======================================================================
+COMMAND & CODE REFERENCE: STORAGE & RAM AUTOMATION (June 25, 2026)
+======================================================================
+
+[1] NATIVE LINUX STORAGE CHEAT SHEET
+--------------------------------------------------
+* Check all disk space in human-readable format (GB/MB):
+  df -h
+
+* Check total summary of all drives combined:
+  df -h --total
+
+* Check live memory/RAM allocation statistics:
+  free -h
+  cat /proc/meminfo
+
+[2] PYTHON HARDWARE CAPTURE SYNTAX
+--------------------------------------------------
+* To pull disk space without installing extra packages:
+  import shutil
+  total, used, free = shutil.disk_usage("/")
+  used_percent = (used / total) * 100
+
+* To slice raw text out of Linux kernel system logs:
+  with open("/proc/meminfo", "r") as f:
+      lines = f.readlines()
+  # lines[0].split()[1] isolates the raw total memory integer value
+
+[3] AUTOMATION PERSISTENCE
+--------------------------------------------------
+* Check running cron background workers:
+  crontab -l
+
+==================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
