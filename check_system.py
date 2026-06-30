@@ -10,7 +10,7 @@
    # print(content)
    # print("--- File Content End ---\n")
 
-target_file = "/home/lokesh-b/Desktop/DevOps_Logbook.txt"
+target_file = "/home/lokesh-b/Desktop/devops-cloud-automation/DevOps_Logbook.txt"
 
 with open(target_file, "r") as file:
     content = file.read()
