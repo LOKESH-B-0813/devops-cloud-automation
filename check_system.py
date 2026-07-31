@@ -19,6 +19,6 @@ with open(target_file, "r") as file:
 keyword = "Path"
 
 if keyword in content:
-    print(f"🎯 Analysis Alert: Found the concept '{keyword}' inside your logbook!")
+    print(f"Analysis Alert: Found the concept '{keyword}' inside your logbook!")
 else:
     print(f"❌ '{keyword}' was not found in the file.")

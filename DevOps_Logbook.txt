@@ -77,12 +77,22 @@ COMMAND & CODE REFERENCE: STORAGE & RAM AUTOMATION (June 25, 2026)
 
 ==================================================================================================================================================================================
 
+===================================================================================================
+Date: July 17, 2026
+Session: Cloud Infrastructure Alerts & Automated Security Remediation
 
+Accomplishments:
+- Engineered 'basic_system_check.py' to query root partition storage and handle base-2 threshold alarms.
+- Mastered hardware block logic: Why cloud tracking requires using the computer's native 1024 calculation method instead of human 1000 metrics to prevent delayed alerts.
+- Developed 'security_audit.py' utilizing bitwise masking filters to scan for illegal file modifications.
+- Implemented an automated compliance loop that actively catches configuration exploits and resets file privileges to safe enterprise baselines.
 
+Commands Mastered:
 
+df -h --total -> Checks total physical drive allocation across all partitions in human-readable GB sizes to audit actual available disk limits.
 
+chmod 666 mock_passwd -> Opens up a file completely, giving read and write permissions to everyone (Owner, Group, and Public) to simulate a dangerous configuration vulnerability.
 
+python3 basic_system_check.py -> Executes the background capacity script to monitor if system disk space drops below the safe baseline threshold.
 
-
-
-
+python3 security_audit.py -> Runs the automated scanning loop that catches permission exploits and instantly forces the file back to standard secure defaults.
