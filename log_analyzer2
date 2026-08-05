@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+import os
+from datetime import datetime
+
+# =========================================================
+# REAL-WORLD AUTOMATION: DYNAMIC TIMESTAMPED LOG AUDITOR
+# =========================================================
+
+# 1. Simulate server log entries
+sample_server_logs = """
+2026-08-04 08:30:00 [INFO] Nginx web server started.
+2026-08-04 08:31:12 [ERROR] Out of Memory: Killed process 4102 (node).
+2026-08-04 08:32:05 [INFO] User session started for dev_admin.
+2026-08-04 08:33:40 [WARNING] Disk partition /var/log is 88% full.
+2026-08-04 08:35:19 [ERROR] Failed SSH login attempt from IP 192.168.1.50.
+2026-08-04 08:36:00 [CRITICAL] Database connection timeout on port 27017!
+"""
+
+# Write initial sample log file
+input_log_path = "system_events.log"
+with open(input_log_path, "w") as f:
+    f.write(sample_server_logs.strip())
+
+# 2. Generate a dynamic, unique report filename using datetime
+current_timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+output_report_path = f"error_report_{current_timestamp}.txt"
+
+# Keywords that trigger a security/system alert
+ALERT_KEYWORDS = ["ERROR", "WARNING", "CRITICAL"]
+
+total_issues = 0
+
+print(f"[*] Reading log file: '{input_log_path}'...")
+print(f"[*] Generating dynamic report: '{output_report_path}'...\n")
+
+# 3. Read input safely & write to the newly generated report file
+with open(input_log_path, "r") as log_file, open(output_report_path, "w") as report_file:
+    
+    # Header for the real-world audit document
+    report_file.write(f"=== HELORA / SYSTEM AUDIT REPORT ===\n")
+    report_file.write(f"Generated On : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+    report_file.write(f"Source Log   : {input_log_path}\n")
+    report_file.write("====================================\n\n")
+
+    for line_number, line in enumerate(log_file, start=1):
+        # Check if any alert keyword exists in the current line
+        if any(keyword in line for keyword in ALERT_KEYWORDS):
+            total_issues += 1
+            formatted_entry = f"Line {line_number:02d} | {line.strip()}"
+            
+            # Print to terminal for real-time visibility
+            print(f"  ⚠️ ALERT DETECTED: {formatted_entry}")
+            
+            # Save to the timestamped file
+            report_file.write(f"[FLAGGED] {formatted_entry}\n")
+
+    report_file.write("\n====================================\n")
+    report_file.write(f"TOTAL CRITICAL ISSUES IDENTIFIED: {total_issues}\n")
+
+print("\n---------------------------------------------------------")
+print(f"✅ Success! Created NEW file: '{output_report_path}'")
+print(f"📊 Summary: {total_issues} issues isolated.")
+print("---------------------------------------------------------")

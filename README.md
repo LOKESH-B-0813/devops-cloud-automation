@@ -2,7 +2,7 @@
 
 A production-ready repository tracking my hands-on journey in DevOps, Cloud Engineering, and Infrastructure Automation. This repository documents real-world scripts, system administration configurations, and automation logic running on Linux environments.
 
-## 🛠️ Project Contents
+## Project Contents
 
 This workspace is structured to handle core Linux system health checks, log analytics, and automation tasks:
 
@@ -12,7 +12,7 @@ This workspace is structured to handle core Linux system health checks, log anal
 * **`DevOps_Logbook.txt`** - A progressive tracking document capturing my daily Linux administration commands, system utilities, and architectural learning blocks.
 * **`dot.py`** - Experimental automation component exploring custom system utility loops.
 
-## 🚀 Technical Competencies Showcased
+## Technical Competencies Showcased
 * **Linux Administration:** Advanced file permissions, terminal workflows, and process management.
 * **Automation Engineering:** Writing modular, production-ready Python code to handle OS-level monitoring tasks.
 * **Version Control:** Professional source code architecture using industrial Git workflows and the GitHub CLI (`gh`).
