@@ -96,3 +96,47 @@ chmod 666 mock_passwd -> Opens up a file completely, giving read and write permi
 python3 basic_system_check.py -> Executes the background capacity script to monitor if system disk space drops below the safe baseline threshold.
 
 python3 security_audit.py -> Runs the automated scanning loop that catches permission exploits and instantly forces the file back to standard secure defaults.
+
+======================================================================================================================================================================================
+
+Date: August 12, 2026
+
+1. Overview
+This reference document outlines the foundational concepts and practical implementations of Python automation for DevOps and System Administration. The primary focus is backend infrastructure management, server maintenance, and system monitoring (excluding UI/browser-based workflows).
+
+2. Core Python Modules
+The following standard Python libraries are utilized for system-level operations:
+
+os: Operating system interface for directory navigation, path manipulations, and environment variables.
+
+shutil: High-level file operations including file copying, archiving, and storage management.
+
+sys: System-specific parameters and functions to handle command-line arguments and runtime environments.
+
+subprocess: Execution of native OS commands and external system binary management directly from scripts.
+
+requests: Handling HTTP/HTTPS communications for API integrations and status monitoring.
+
+3. Implemented Automation Use-Cases
+
+A. Log Parsing & Error Detection
+Objective: Automate the scanning of system and application logs to flag critical errors.
+
+Implementation: Scripts designed to read file streams, filter specific log levels (e.g., ERROR, CRITICAL), and isolate issue patterns for troubleshooting.
+
+B. Timestamped Health Reporting
+Objective: Generate automated status reports for system health tracking.
+
+Implementation: Scripts that capture system metrics and write timestamped diagnostic reports for historical record-keeping and auditing.
+
+C. Storage & Log Maintenance
+Objective: Prevent storage depletion due to accumulating log files.
+
+Implementation: Automated retention policies scripted to identify and purge obsolete log files based on file age and size thresholds.
+
+4. Execution & Verification Environment
+File System Structure: Organized within dedicated project directories to isolate script dependencies and outputs.
+
+Runtime Environment: Native Linux Terminal execution validated via Bash CLI (python3 <script_name>.py).
+
+
