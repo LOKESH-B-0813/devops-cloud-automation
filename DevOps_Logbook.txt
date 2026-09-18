@@ -140,3 +140,17 @@ File System Structure: Organized within dedicated project directories to isolate
 Runtime Environment: Native Linux Terminal execution validated via Bash CLI (python3 <script_name>.py).
 
 
+===================================================================================================
+Date: September 18, 2026
+Session: Network Architecture Diagnostics & Layered Troubleshooting
+
+Accomplishments:
+- Established formal alignment between Linux socket operations and the 7-layer OSI reference framework.
+- Audited local host interface parameters using 'ip -br addr' to isolate physical Layer 2 MAC addresses and Layer 3 IPv4 configurations.
+- Integrated ping diagnostics to calculate real-world packet loss percentages and latency stability (jitter / mdev metrics).
+- Mapped service port bindings to OSI Layer 4 transport contexts (TCP/UDP) for automated system metric listeners.
+
+Commands Mastered:
+ip -br addr -> Displays concise operational states, physical MAC interfaces, and assigned IP addresses across all local interfaces.
+ping -c 5 8.8.8.8 -> Sends ICMP echo requests to evaluate packet drop rate, latency variance, and transit reachability.
+traceroute -m 10 8.8.8.8 -> Maps Layer 3 intermediate router hops to diagnose path routing failures.
