@@ -154,3 +154,18 @@ Commands Mastered:
 ip -br addr -> Displays concise operational states, physical MAC interfaces, and assigned IP addresses across all local interfaces.
 ping -c 5 8.8.8.8 -> Sends ICMP echo requests to evaluate packet drop rate, latency variance, and transit reachability.
 traceroute -m 10 8.8.8.8 -> Maps Layer 3 intermediate router hops to diagnose path routing failures.
+
+
+===================================================================================================
+Date: September 28, 2026
+Session: Network Protocols, Layer 2 Ethernet & L3 IPv4 Architecture
+
+Accomplishments:
+- Evaluated TCP/IP 4-layer model operational mapping against the 7-layer OSI reference framework.
+- Deconstructed Layer 2 Ethernet frame composition (Preamble, MAC headers, EtherType, MTU payload, FCS).
+- Audited MAC address composition: 24-bit Vendor OUI isolation vs 24-bit physical device serial assignment.
+- Structured 32-bit IPv4 binary place-value transformations and identified reserved IP blocks (APIPA, Loopback).
+
+Commands Mastered:
+ip -br link -> Displays physical Layer 2 interface hardware state and MAC burned-in addresses.
+ip route show -> Inspects Layer 3 default gateway path rules and local subnet routing tables.
