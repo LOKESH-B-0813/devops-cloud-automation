@@ -19,3 +19,6 @@ This workspace is structured to handle core Linux system health checks, log anal
 
 ---
 *Maintained by [LOKESH-B-0813](https://github.com/LOKESH-B-0813)*
+
+## Network Audit Utilities
+- `network_interface_audit.sh`: Quick shell utility to report MAC link state, assigned IPv4 addresses, and active TCP/UDP daemon sockets.
