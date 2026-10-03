@@ -169,3 +169,12 @@ Accomplishments:
 Commands Mastered:
 ip -br link -> Displays physical Layer 2 interface hardware state and MAC burned-in addresses.
 ip route show -> Inspects Layer 3 default gateway path rules and local subnet routing tables.
+
+===================================================================================================
+Date: October 3, 2026
+Session: TCP/IP Model Ingestion & Socket Layer Automation
+
+Accomplishments:
+- Audited the TCP/IP 4-layer model operational hierarchy against live Linux socket interfaces.
+- Validated transport layer reliability dynamics: TCP 3-way handshaking vs UDP stateless datagram delivery.
+- Engineered 04_network_socket_auditor.py to programmatically probe remote Layer 4 TCP port availability.
