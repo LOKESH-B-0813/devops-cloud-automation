@@ -187,3 +187,12 @@ Accomplishments:
 - Deployed 10 modular system diagnostic scripts across kernel metrics, routing paths, and process inspection.
 - Expanded networking syllabus references covering Days 8-12 (Subnetting, CIDR, Broadcast Domains, and ARP).
 - Validated Layer 2 and Layer 3 kernel states through automated shell checks.
+
+===================================================================================================
+Date: October 6, 2026
+Session: Day 13 ICMP Diagnostics, Socket Metric Engines & Kernel File Descriptors
+
+Accomplishments:
+- Deconstructed ICMP protocol architecture: Type/Code operational mapping and TTL expiration mechanisms.
+- Engineered 15_icmp_ping_tester.py to programmatically probe host layer 3 reachability.
+- Automated low-level Linux diagnostics for file descriptors, inode limits, and network interface frame drops.
