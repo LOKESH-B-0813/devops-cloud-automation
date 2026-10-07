@@ -196,3 +196,12 @@ Accomplishments:
 - Deconstructed ICMP protocol architecture: Type/Code operational mapping and TTL expiration mechanisms.
 - Engineered 15_icmp_ping_tester.py to programmatically probe host layer 3 reachability.
 - Automated low-level Linux diagnostics for file descriptors, inode limits, and network interface frame drops.
+
+===================================================================================================
+Date: October 7, 2026
+Session: Day 14 ARP Resolution Security, Socket Backlogs & Low-Level Network Diagnostics
+
+Accomplishments:
+- Audited ARP resolution protocol operations, CAM cache tables, and spoofing mitigation techniques.
+- Engineered automated Python audit scripts to parse kernel /proc/net/arp, /proc/net/dev drops, and memory swap.
+- Implemented Linux administrative scripts to audit TCP SYN backlog parameters, ephemeral port allocation, and established connections.
