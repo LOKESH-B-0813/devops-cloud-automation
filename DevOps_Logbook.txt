@@ -205,3 +205,12 @@ Accomplishments:
 - Audited ARP resolution protocol operations, CAM cache tables, and spoofing mitigation techniques.
 - Engineered automated Python audit scripts to parse kernel /proc/net/arp, /proc/net/dev drops, and memory swap.
 - Implemented Linux administrative scripts to audit TCP SYN backlog parameters, ephemeral port allocation, and established connections.
+
+===================================================================================================
+Date: October 10, 2026
+Session: Days 15-18 Switching Architecture, Kernel Tuning & Advanced Diagnostics Expansion
+
+Accomplishments:
+- Documented enterprise Layer 2 architectures: CAM table aging, IEEE 802.1Q VLAN trunking, STP loop avoidance, and SVI Inter-VLAN routing.
+- Engineered 7 low-level Python metric analyzers targeting /proc/stat context switches, zombie processes, MTU states, and raw TCP states.
+- Implemented 10 administrative Linux diagnostic utilities for OOM auditing, storage scheduler inspection, TCP keepalive tuning, and buffer allocations.
