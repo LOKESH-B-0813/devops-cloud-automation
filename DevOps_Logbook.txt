@@ -214,3 +214,12 @@ Accomplishments:
 - Documented enterprise Layer 2 architectures: CAM table aging, IEEE 802.1Q VLAN trunking, STP loop avoidance, and SVI Inter-VLAN routing.
 - Engineered 7 low-level Python metric analyzers targeting /proc/stat context switches, zombie processes, MTU states, and raw TCP states.
 - Implemented 10 administrative Linux diagnostic utilities for OOM auditing, storage scheduler inspection, TCP keepalive tuning, and buffer allocations.
+
+===================================================================================================
+Date: October 13, 2026
+Session: Days 21-22 OSPF & BGP Routing Models, Low-Level Socket Accounting & Ring Buffers
+
+Accomplishments:
+- Documented Day 21 OSPF link-state hierarchy (Dijkstra SPF math, LSAs, Area 0 design) and Day 22 BGP path-vector peering mechanisms.
+- Engineered Python diagnostic tools targeting /proc/net/sockstat, /proc/net/udp sockets, HugePages allocation, and dynamic CIDR boundary calculation.
+- Automated system shell diagnostics for ARP neighbor garbage collection thresholds, netdev backlog queues, and routing protocol port listeners.
